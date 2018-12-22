@@ -47,3 +47,31 @@ Django for Mac OS
 >網址輸入 http://127.0.0.1:8000/   或    輸入http://localhost:8000/
 
 #以上步驟為Django建置Web server步驟
+
+
+#修改Django Web Server網頁內容
+
+#修改views.py檔案(路徑：desktop/django/VENV/mysite/foods/views.py）
+
+>from django.shortcuts import render
+
+> #Create your views here. //此行為檔案註解
+>from django.http import HttpResponse
+
+>def hello_world(request):
+> 	return HttpResponse("Hello World!")
+
+
+
+#修改urls.py檔案（路徑：desktop/django/VENV/mysite/mysite/urls.py）
+
+>from foods.views import hello_world
+>from django.conf.urls import url
+
+>urlpatterns = [
+>    url(r'^hello/$', hello_world),
+>]
+
+開啟chrome輸入網址：
+http://localhost:8000/hello/
+

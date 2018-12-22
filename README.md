@@ -50,6 +50,7 @@ Django for Mac OS
 
 #
 #
+
 #修改Django Web Server網頁內容
 
 #修改views.py檔案(路徑：desktop/django/VENV/mysite/foods/views.py）
@@ -57,22 +58,29 @@ Django for Mac OS
 >from django.shortcuts import render
 
 > #Create your views here. //此行為檔案註解
+
 >from django.http import HttpResponse
 
 >def hello_world(request):
+
 > 	return HttpResponse("Hello World!")
+
 
 
 
 #修改urls.py檔案（路徑：desktop/django/VENV/mysite/mysite/urls.py）
 
 >from foods.views import hello_world
+
 >from django.conf.urls import url
 
 >urlpatterns = [
+
 >    url(r'^hello/$', hello_world),
+
 >]
 
 開啟chrome輸入網址：
+
 http://localhost:8000/hello/
 

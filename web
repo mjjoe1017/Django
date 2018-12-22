@@ -1,0 +1,53 @@
+MAC
+
+桌面建立Django資料夾
+開啟DOS
+輸入 
+cd desktop cd Django
+python -m venv venv
+cd venv
+
+source bin/activate
+pip install django(安裝最新版本）
+
+安裝後輸入
+python
+import django
+django.VERSION
+
+在VENV路徑輸入
+django-admin.py start project mysite
+cd mystie
+
+
+python manage.py runserver -h (可以看help指令）
+python manage.py runserver
+
+開啟chrome
+輸入http://127.0.0.1:8000/
+或
+輸入http://localhost:8000/
+
+
+修改desktop/django/VENV/mysite/foods/views.py
+
+from django.shortcuts import render
+
+# Create your views here.
+from django.http import HttpResponse
+
+def hello_world(request):
+	return HttpResponse("Hello World!")
+
+
+
+修改desktop/django/VENV/mysite/mysite/urls.py
+
+from foods.views import hello_world
+from django.conf.urls import url
+
+urlpatterns = [
+    url(r'^hello/$', hello_world),
+]
+
+chrome URL:http://localhost:8000/hello/

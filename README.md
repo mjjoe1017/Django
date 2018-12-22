@@ -48,7 +48,8 @@ Django for Mac OS
 
 #以上步驟為Django建置Web server步驟
 
-
+#
+#
 #修改Django Web Server網頁內容
 
 #修改views.py檔案(路徑：desktop/django/VENV/mysite/foods/views.py）
